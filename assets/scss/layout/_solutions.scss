@@ -1,0 +1,115 @@
+.solutions {
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        &__card {
+            height: auto;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fdfdfd;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+                rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+            &__hexagon {
+                position: relative;
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 1.1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 200px; /* Ajusta el ancho */
+                height: 230px; /* Ajusta la altura */
+                background: $forest-green;
+                border-radius: 0; /* No se usa border-radius */
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                transition: all ease-in-out 0.3s;
+            }
+
+
+
+    
+            h6 {
+                width: 100%;
+                font-size: 1.3rem;
+                color: $forest-green;
+                text-align: center;
+            }
+    
+            p {
+                text-align: start;
+                margin-top: 10px;
+                font-size: 1rem;
+            }
+
+            .hexagon-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 180px; /* Tamaño de la imagen */
+                height: 210px; /* Ajusta la altura */
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                object-fit: cover;
+            }
+        }
+    }
+    
+}
+
+// @media (min-width:500px) {
+//     .solutions {
+//         &__cards {
+//             &__card {
+//                 height: 220px;
+//             }
+//         }
+//     }
+// }
+
+@media (min-width:992px) {
+    .solutions {
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+            );
+            gap: 16px;
+
+            &__card {
+                justify-content: start;
+                width: 100%; 
+                height: 520px !important;
+
+                h6 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .solutions {
+        &__cards {
+            &__card {
+                height: 460px !important;
+            }
+        }
+    }
+}

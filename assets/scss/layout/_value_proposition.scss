@@ -1,0 +1,209 @@
+.value-proposition {
+    color: $mantis;
+    background: linear-gradient($black 75%, $forest-green , $mantis, $white);
+    padding: 5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    &__logo {
+        user-select: none;
+        height: 100px;
+        width: 100%;
+
+        img {
+            transform: translateX(-8px);
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+.value-text {
+    font-family: "Montserrat", sans-serif;
+    margin-top: -20px;
+
+    .headline {
+        font-size: 2.7rem;
+        font-weight: 550;
+        letter-spacing: 1px;
+        text-shadow: -5px 4px 18px $mantis;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+.cta-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.cta-button{
+    display: inline-block;
+    color: #000000;
+    padding: 0.6em 1.3em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #6CB860;
+    cursor: pointer;
+    border: 1px solid #6CB860;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #108239, -6px -6px 12px #108239;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.cta-button:active {
+    color: #000000;
+    box-shadow: inset 4px 4px 12px #6CB860, inset -4px -4px 12px #108239;
+}
+
+.media-container {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    .promo-video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:992px){
+    .value-proposition {
+        height: 100vh;
+        background: linear-gradient($black 80%, $forest-green , $mantis, $white);
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+
+        &__logo {
+            height: 170px;
+            img {
+                transform: translateX(-18px);
+            }
+
+
+        }
+
+        &__text {
+            .value-text {
+                font-family: "Montserrat", sans-serif;
+                margin-top: -20px;
+            
+                .headline {
+                    font-size: 3.2rem;
+                    font-weight: 550;
+                    letter-spacing: 1px;
+                    text-shadow: -5px 4px 18px $mantis;
+                }
+            
+                .description {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        &__media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -20px;
+        }
+
+        // &__text {
+        //     width: 45%;
+        // }
+        &__media {
+            width: 45%;
+        }
+    }
+
+    .cta-button-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .cta-button{
+        all: unset;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0.6em 2em;
+        border: $mantis solid 0.15em;
+        border-radius: 0.25em;
+        color: $mantis;
+        font-size: 1.5em;
+        font-weight: 600;
+        cursor: pointer;
+        overflow: hidden;
+        transition: border 300ms, color 300ms;
+        user-select: none;
+
+
+        p {
+            z-index: 1;
+        }
+        &:hover {
+            color: $black;
+        }
+        &:active {
+            border-color: $mantis;
+        }
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            aspect-ratio: 1;
+            background: $mantis;
+            opacity: 70%;
+            border-radius: 50%;
+            transition: transform 500ms, background 300ms;
+        }
+
+        &::before {
+            left: 0;
+            transform: translateX(-13em);
+        }
+
+        &::after {
+            right: 0;
+            transform: translateX(13em);
+        }
+
+        &:hover::before {
+            transform: translateX(-1em);
+        }
+
+        &:hover::after {
+            transform: translateX(1em);
+        }
+
+        &:active::before,
+        &:active::after {
+            background: $forest-green;
+        }
+    }
+
+    .media-container {
+        margin: 0;
+        padding: 0;
+        height: 500px;
+        .promo-video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

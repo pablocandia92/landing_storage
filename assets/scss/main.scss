@@ -1,0 +1,30 @@
+@import 'base/reset';
+@import 'abstracts/variables';
+
+@import 'base/general';
+
+@import 'layout/header';
+@import 'layout/value_proposition';
+@import 'layout/questions';
+@import 'layout/_solutions.scss';
+@import 'layout/confidence';
+@import 'layout/how_it_works';
+@import 'layout/faqs';
+@import 'layout/pricing';
+@import 'layout/contact';
+@import 'layout/footer';
+
+@import 'components/pro_card';
+@import 'components/instagram';
+@import 'components/whatsapp';
+
+/*patch en*/
+@import 'patch_en/value_propisition';
+@import 'patch_en/solutions';
+@import 'patch_en/confidence';
+@import 'patch_en/pricing';
+@import 'patch_en/footer';
+
+/*animations*/
+@import 'base/animations';
+@import 'animations/value_prop_animations';
