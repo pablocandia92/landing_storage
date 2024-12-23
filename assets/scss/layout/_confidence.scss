@@ -102,23 +102,6 @@
     }
 }
 
-@media (min-width:390px) {
-  .confidence {
-    &__cards {
-      &__card {
-        height: 310px;
-
-        .blob {
-          height: calc(310px/2);
-        }
-        .bg {
-          height: 310px;
-        }
-      }
-    }
-  }
-}
-
 @media (min-width:992px) {
   .confidence {
 

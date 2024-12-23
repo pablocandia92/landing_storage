@@ -290,42 +290,12 @@ ol, ul {
     overflow: hidden;
     transition: border 300ms, color 300ms;
     user-select: none;
+    background-color: #6CB860;
+    color: #000000;
+    border: 4px solid #108239;
   }
   .cta-button p {
     z-index: 1;
-  }
-  .cta-button:hover {
-    color: #000000;
-  }
-  .cta-button:active {
-    border-color: #6CB860;
-  }
-  .cta-button::after, .cta-button::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    aspect-ratio: 1;
-    background: #6CB860;
-    opacity: 70%;
-    border-radius: 50%;
-    transition: transform 500ms, background 300ms;
-  }
-  .cta-button::before {
-    left: 0;
-    transform: translateX(-13em);
-  }
-  .cta-button::after {
-    right: 0;
-    transform: translateX(13em);
-  }
-  .cta-button:hover::before {
-    transform: translateX(-1em);
-  }
-  .cta-button:hover::after {
-    transform: translateX(1em);
-  }
-  .cta-button:active::before, .cta-button:active::after {
-    background: #108239;
   }
   .media-container {
     margin: 0;
@@ -524,17 +494,6 @@ ol, ul {
   }
 }
 
-@media (min-width: 390px) {
-  .confidence__cards__card {
-    height: 310px;
-  }
-  .confidence__cards__card .blob {
-    height: 155px;
-  }
-  .confidence__cards__card .bg {
-    height: 310px;
-  }
-}
 @media (min-width: 992px) {
   .confidence__cards {
     display: flex;
@@ -837,6 +796,7 @@ ol, ul {
   border-radius: 0.25rem;
   background-color: #0E2327;
   padding: 1.5rem;
+  background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
 }
 .pricing__card__header {
   display: flex;
@@ -847,24 +807,24 @@ ol, ul {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: #0E2327;
 }
 .pricing__card__header .price {
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;
-  color: #fff;
+  color: #0E2327;
 }
 .pricing .desc {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   line-height: 1.625;
-  color: rgb(156, 163, 175);
+  color: #0E2327;
 }
 .pricing .lists {
   margin-bottom: 1.5rem;
   flex: 1 1 0%;
-  color: #ffffff;
+  color: #0E2327;
 }
 .pricing .lists .list i {
   margin-right: 7px;
